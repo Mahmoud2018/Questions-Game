@@ -177,7 +177,7 @@ e.target.classList.replace("btn", "btn-Checked");
 
 // Timer function 
 var timer = document.getElementById("timer");
-var time = 120; // 3 minutes in seconds
+var time = 60; // 3 minutes in seconds
 
 // Update the timer display every second
 var intervalId = setInterval(function() {
@@ -195,8 +195,8 @@ var intervalId = setInterval(function() {
 // Reset the timer when the button is clicked
 buttonGroup2.addEventListener("click", function() {
   clearInterval(intervalId);
-  time = 90;
-  timer.innerHTML = "1:30";
+  time = 60;
+  timer.innerHTML = "1:00";
 
   intervalId = setInterval(function() {
     var minutes = Math.floor(time / 60);

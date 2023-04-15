@@ -195,8 +195,8 @@ var intervalId = setInterval(function() {
 // Reset the timer when the button is clicked
 buttonGroup2.addEventListener("click", function() {
   clearInterval(intervalId);
-  time = 120;
-  timer.innerHTML = "2:00";
+  time = 90;
+  timer.innerHTML = "1:30";
 
   intervalId = setInterval(function() {
     var minutes = Math.floor(time / 60);

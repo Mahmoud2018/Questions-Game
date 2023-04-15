@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8" />
+  <title>Questions and Answer Game</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Style.css">
+
+  <script>
+  /* Darkmode */
+    function Darkmode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    };
+    </script>
+  
+</head>
+
+
+
+<body>
+
+  <div class="heder" >
+
+    <label id="darkmodebtn" class="switch btn-color-mode-switch">
+      <input type="checkbox" name="color_mode" id="color_mode" value="1" onclick="Darkmode()">
+      <label for="color_mode" data-on="Dark" data-off="Light" class="btn-color-mode-switch-inner"></label>
+    </label>
+    <div>
+      <h2 class="HederText">مسابقة الأسئلة الثقافية</h2>
+      <h2 class="timer" id="timer" >2:00</h2>
+      
+    </div>
+   
+
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col">
+        <h2 class="pointsDisplay3">النقاط</span></h2>
+
+        <h2 class="pointsDisplay1"><span id="pointsDisplay1" >0</span></h2>
+        <button id="add-button1" class="btn btn-dark" >+</button>
+        <button id="subtract-button1" class="btn btn-dark" >-</button>
+
+        <h2 class="pointsDisplay2"><span id="pointsDisplay2" >0</span></h2>
+        <button id="add-button2" class="btn btn-dark" >+</button>
+        <button id="subtract-button2" class="btn btn-dark" >-</button>
+        
+        <div class="countBtn">
+          <button id="countBtn1" class="btn ">اضافة نقطة</button>
+          
+          <button id="countBtn2" class="btn ">اضافة نقطة</button>
+          <button id="countBtn3" class="btn btn-dark">تصفير النقاط</button>
+        </div>
+
+      </div>
+
+      <div class="co2">
+        <div class="button-group1" id="button-group1">
+          <button id="button-1" class="btn btn-info" >1</button>
+          <button id="button-2" class="btn btn-info" >2</button>
+          <button id="button-3" class="btn btn-info" >3</button>
+          <button id="button-4" class="btn btn-info" >4</button>
+          <button id="button-5" class="btn btn-info" >5</button>
+          <button id="button-6" class="btn btn-info" >6</button>
+          <button id="button-7" class="btn btn-info" >7</button>
+          <button id="button-8" class="btn btn-info" >8</button>
+          
+      </div>
+
+        <div class="grid-container2" id="button-group2"  >
+          <button id="button-1" class="btn btn-dark" >1</button>
+          <button id="button-2" class="btn btn-dark" >2</button>
+          <button id="button-3" class="btn btn-dark" >3</button>
+          <button id="button-4" class="btn btn-dark" >4</button>
+          <button id="button-5" class="btn btn-dark" >5</button>
+          <button id="button-6" class="btn btn-dark" >6</button>
+          <button id="button-7" class="btn btn-dark" >7</button>
+          <button id="button-8" class="btn btn-dark" >8</button>
+          <button id="button-9" class="btn btn-dark" >9</button>
+          <button id="button-10" class="btn btn-dark" >10</button>
+          <button id="button-11" class="btn btn-dark" >11</button>
+          <button id="button-12" class="btn btn-dark" >12</button>
+          <button id="button-13" class="btn btn-dark" >13</button>
+          <button id="button-14" class="btn btn-dark" >14</button>
+          <button id="button-15" class="btn btn-dark" >15</button>
+          <button id="button-16" class="btn btn-dark" >16</button>
+          <button id="button-17" class="btn btn-dark" >17</button>
+          <button id="button-18" class="btn btn-dark" >18</button>
+          <button id="button-19" class="btn btn-dark" >19</button>
+          <button id="button-20" class="btn btn-dark" >20</button>
+          <button id="button-21" class="btn btn-dark" >21</button>
+          <button id="button-22" class="btn btn-dark" >22</button>
+          <button id="button-23" class="btn btn-dark" >23</button>
+          <button id="button-24" class="btn btn-dark" >24</button>
+          <button id="button-25" class="btn btn-dark" >25</button>
+          <button id="button-26" class="btn btn-dark" >26</button>
+          <button id="button-27" class="btn btn-dark" >27</button>
+          <button id="button-28" class="btn btn-dark" >28</button>
+          <button id="button-29" class="btn btn-dark" >29</button>
+          <button id="button-30" class="btn btn-dark" >30</button>           
+        </div>
+    
+
+     
+        <div class="co4">
+          <div class="question-button">
+            <h3 class="question-BG"> الأسئلة:  </h3>
+            <h3 class="question-BG2"> <span id="question-number"></span> :السؤال </h3>
+            <h2 class="question-text" id="question-container" > </h2>
+          </div>
+          
+         
+
+          <div class="Answer-button">
+            <button id="Answer" class="btn btn-success" >Answer</button>
+            <h3 id="div-Answer" class="Answer"></h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+ 
+  
+
+  <script type="module" src="App.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

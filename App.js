@@ -1,8 +1,8 @@
 import {Q1, Q2 , Q3 , Q4 , Q5 , Q6 , Q7 , Q8} from './component.js'; 
 
 
-// let points1 = 0; // initialize points1 variable to 0
-// let points2 = 0; // initialize points2 variable to 0
+let points1 = 0; // initialize points1 variable to 0
+let points2 = 0; // initialize points2 variable to 0
 
 // // add event listeners to countBtn1 and countBtn2
 // document.getElementById("countBtn1").addEventListener("click", function() {

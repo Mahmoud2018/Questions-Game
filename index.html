@@ -7,12 +7,23 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="Style.css">
 
+  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+
   <script>
   /* Darkmode */
     function Darkmode() {
     var element = document.body;
     element.classList.toggle("dark-mode");
     };
+
+    function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    
+  } else {
+    x.style.display = "none";
+  }
+}
     </script>
   
 </head>
@@ -22,18 +33,29 @@
 <body>
 
   <div class="heder" >
-
+  
     <label id="darkmodebtn" class="switch btn-color-mode-switch">
       <input type="checkbox" name="color_mode" id="color_mode" value="1" onclick="Darkmode()">
       <label for="color_mode" data-on="Dark" data-off="Light" class="btn-color-mode-switch-inner"></label>
     </label>
-    <div>
-      <h2 class="HederText">مسابقة الأسئلة الثقافية</h2>
-      <h2 class="timer" id="timer" >2:00</h2>
+    <div class="container">
+      <div class="row">
       
-    </div>
-   
+        <h2 class="HederText">مسابقة الأسئلة الثقافية</h2>
 
+          <div class="div-alarm" id="myDIV" style="display: none;"> 
+            <lord-icon 
+              src="https://cdn.lordicon.com/byyilifd.json"
+              trigger="loop"
+              style="width:100px;height:100px">
+            </lord-icon>
+          </div>
+          <div 
+          class="timer" id="timer" >2:00
+          </div> 
+      </div>
+    </div>
+    
   </div>
 
 
@@ -52,9 +74,9 @@
         <button id="subtract-button2" class="btn btn-dark" >-</button>
         
         <div class="countBtn">
-          <button id="countBtn1" class="btn ">اضافة نقطة</button>
+          <!-- <button id="countBtn1" class="btn ">اضافة نقطة</button>
           
-          <button id="countBtn2" class="btn ">اضافة نقطة</button>
+          <button id="countBtn2" class="btn ">اضافة نقطة</button> -->
           <button id="countBtn3" class="btn btn-dark">تصفير النقاط</button>
         </div>
 

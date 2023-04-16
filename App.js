@@ -1,19 +1,19 @@
-import {Q1, Q2 , Q3 , Q4 , Q5 , Q6 , Q7 , Q8} from './component.js'; 
+import {Q1} from './component.js'; 
 
 
 let points1 = 0; // initialize points1 variable to 0
 let points2 = 0; // initialize points2 variable to 0
 
-// // add event listeners to countBtn1 and countBtn2
-// document.getElementById("countBtn1").addEventListener("click", function() {
-// points1++; // increment points1 by 1
-// document.getElementById("pointsDisplay1").innerHTML = points1; // display the updated points1 value
-// });
+// add event listeners to countBtn1 and countBtn2
+document.getElementById("countBtn1").addEventListener("click", function() {
+points1++; // increment points1 by 1
+document.getElementById("pointsDisplay1").innerHTML = points1; // display the updated points1 value
+});
 
-// document.getElementById("countBtn2").addEventListener("click", function() {
-// points2++; // increment points2 by 1
-// document.getElementById("pointsDisplay2").innerHTML = points2; // display the updated points2 value
-// });
+document.getElementById("countBtn2").addEventListener("click", function() {
+points2++; // increment points2 by 1
+document.getElementById("pointsDisplay2").innerHTML = points2; // display the updated points2 value
+});
 
 document.getElementById("countBtn3").addEventListener("click", function() {
 	// reset points
@@ -77,7 +77,7 @@ valueSpan2.textContent = points2;
 
 
 
-let Qgrup = [Q1, Q2 , Q3 , Q4 , Q5 , Q6 , Q7 , Q8 ];
+let Qgrup = [Q1];
 	
 var x = document.getElementById("myDIV");
 
@@ -91,7 +91,7 @@ buttonGroup1.addEventListener("click", (event) => {
 
   if (event.target.nodeName === "BUTTON") {
     questionIndex = event.target.id.split("-")[1] - 1;
-    questions = Qgrup[questionIndex];
+    questions = Qgrup[0][questionIndex];
  
   }
   });
@@ -141,7 +141,7 @@ x.style.display = "none";
 
 
 // Checked function buttons1
-let Buttons = document.querySelectorAll(".button-group1 button");
+let Buttons = document.querySelectorAll(".col1 button");
 
 // loop through the buttons using for..of 
 for (let button of Buttons) {
@@ -177,7 +177,7 @@ e.target.classList.replace("btn", "btn-Checked");
 
 // Timer function 
 var timer = document.getElementById("timer");
-var time = 60; // 3 minutes in seconds
+var time = 90; // 3 minutes in seconds
 
 // Update the timer display every second
 var intervalId = setInterval(function() {
@@ -195,8 +195,8 @@ var intervalId = setInterval(function() {
 // Reset the timer when the button is clicked
 buttonGroup2.addEventListener("click", function() {
   clearInterval(intervalId);
-  time = 60;
-  timer.innerHTML = "1:00";
+  time = 90;
+  timer.innerHTML = "2:00";
 
   intervalId = setInterval(function() {
     var minutes = Math.floor(time / 60);
@@ -208,7 +208,7 @@ buttonGroup2.addEventListener("click", function() {
     if (time < 0) {
       clearInterval(intervalId);
       timer.innerHTML = "0:00";
-      var bell = new Audio("./bell2.mp3");
+      var bell = new Audio("./bell.mp3");
       bell.play();
       x.style.display = "block";
     }

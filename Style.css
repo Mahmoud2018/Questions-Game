@@ -1,7 +1,11 @@
 
 body{
   font-size: 22px;
-  font-family: "Asmaa Font";
+  font-family: 'Asmaa Font';
+
+  src: url('https://drive.google.com/file/d/11rleEqml8N4Chv3A6HWnTQrucCAI8wRB/view?usp=share_link');
+  
+
  }
 
 .Answer-button {
@@ -27,8 +31,22 @@ body{
 margin-left: 30%;
 }
 
-.grid-container2 {
-  margin-top: 5%;
+.col1 {
+  margin-top: 2%;
+  display: grid;
+  column-gap: 32px;
+  row-gap: 35px;
+  grid-template-columns: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
+  grid-auto-rows: 20px 20px;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+}
+
+.col2 {
+  margin-top: 3%;
   display: grid;
   column-gap: 10px;
   row-gap: 10px;
@@ -40,12 +58,20 @@ margin-left: 30%;
 
 
 .btn {
+  
   text-align: center;
   border-width: 3px;
-  font-size: 22px;
+  font-size: 20px;
+  font-family: 'Asmaa Font';
 
-  font-family: "Asmaa Font";
 }
+
+.z .col1 .btn{
+  background-color: #6c6adf;
+  color: white;
+}
+
+
 
 .btn-Checked {
   text-align: center;
@@ -89,6 +115,7 @@ margin-left: 30%;
 }
 
 
+
 #countBtn3{
   margin-top: 10px;
   margin-left: 9%;
@@ -97,8 +124,7 @@ margin-left: 30%;
   border-radius: 50px;
   width: 120px;
   height: 40px;
-  font-size: 15px;
-  font-family: "Asmaa Font";
+  font-size: 22px;
   padding-top: 0%;
 }
 
@@ -131,7 +157,7 @@ margin-left: 30%;
   width: 170px;
   height: 80px;
   font-size: 60px;
-  font-family: "Asmaa Font";
+  
 }
 
 .pointsDisplay2 {
@@ -144,7 +170,6 @@ margin-left: 30%;
   width: 170px;
   height: 80px;
   font-size: 60px;
-  font-family: "Asmaa Font";
   
 }
 
@@ -228,7 +253,7 @@ label {
   font-size: 10px;
   color: #424242;
   font-weight: 500;
-  font-family: "Asmaa Font";
+ 
 }
 
 .btn-color-mode-switch{
@@ -257,7 +282,8 @@ label {
   top: 4px;
   right: 10px;
   font-weight: bold;
-  font-family: "Asmaa Font";
+  font-family: 'Asmaa Font';
+  ;
 
 }
 
@@ -275,7 +301,6 @@ label {
   box-shadow: 0px 0px 6px -2px #111;
   padding: 2px 0px;
   font-size: 10px;
-  font-family: "Asmaa Font";
 }
 
 .btn-color-mode-switch > .alert{
@@ -312,7 +337,8 @@ label {
   right: auto;
   left: 10px;
 
-  font-family: "Asmaa Font";
+  font-family:'Asmaa Font';
+  ;
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
@@ -374,7 +400,8 @@ p.by a{
 .timer{
   font-size: 60px;
   color: #9c2804;
-  font-family: "Asmaa Font";
+  font-family: 'Asmaa Font';
+
   margin-left: 90%;
   margin-top: -100px;
 }

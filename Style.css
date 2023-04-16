@@ -2,9 +2,7 @@
 body{
   font-size: 22px;
   font-family: 'Asmaa Font';
-  src: local('');
-  
-
+  src: url('https://github.com/Mahmoud2018/Questions-Game/blob/main/AsmaaFont.otf');
  }
 
 .Answer-button {
@@ -33,7 +31,7 @@ margin-left: 30%;
 .col1 {
   margin-top: 2%;
   display: grid;
-  column-gap: 32px;
+  column-gap: 35px;
   row-gap: 35px;
   grid-template-columns: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
   grid-auto-rows: 20px 20px;
@@ -62,7 +60,7 @@ margin-left: 30%;
   border-width: 3px;
   font-size: 20px;
   font-family: 'Asmaa Font';
-
+  src: url('https://github.com/Mahmoud2018/Questions-Game/blob/main/AsmaaFont.otf');
 }
 
 .z .col1 .btn{
@@ -282,7 +280,7 @@ label {
   right: 10px;
   font-weight: bold;
   font-family: 'Asmaa Font';
-  ;
+  src: url('https://github.com/Mahmoud2018/Questions-Game/blob/main/AsmaaFont.otf');
 
 }
 
@@ -337,7 +335,7 @@ label {
   left: 10px;
 
   font-family:'Asmaa Font';
-  ;
+  src: url('https://github.com/Mahmoud2018/Questions-Game/blob/main/AsmaaFont.otf');
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
@@ -400,7 +398,7 @@ p.by a{
   font-size: 60px;
   color: #9c2804;
   font-family: 'Asmaa Font';
-
+  src: url('https://github.com/Mahmoud2018/Questions-Game/blob/main/AsmaaFont.otf');
   margin-left: 90%;
   margin-top: -100px;
 }

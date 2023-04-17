@@ -1,8 +1,8 @@
 import {Q1} from './component.js'; 
 
 
-let points1 = 0; // initialize points1 variable to 0
-let points2 = 0; // initialize points2 variable to 0
+let points1 = 0; // initialize points1 letiable to 0
+let points2 = 0; // initialize points2 letiable to 0
 
 // add event listeners to countBtn1 and countBtn2
 document.getElementById("countBtn1").addEventListener("click", function() {
@@ -17,20 +17,20 @@ document.getElementById("pointsDisplay2").innerHTML = points2; // display the up
 
 document.getElementById("countBtn3").addEventListener("click", function() {
 	// reset points
-points1 = 0; // initialize points1 variable to 0
-points2 = 0; // initialize points2 variable to 0
+points1 = 0; // initialize points1 letiable to 0
+points2 = 0; // initialize points2 letiable to 0
 document.getElementById("pointsDisplay1").innerHTML = points2; // display the updated points2 value
 document.getElementById("pointsDisplay2").innerHTML = points2; // display the updated points2 value
 });
 
-const subtractButton = document.getElementById("subtract-button1");
-const subtractButton2 = document.getElementById("subtract-button2");
+let subtractButton = document.getElementById("subtract-button1");
+let subtractButton2 = document.getElementById("subtract-button2");
 
-const addButton = document.getElementById("add-button1");
-const addButton2 = document.getElementById("add-button2");
+let addButton = document.getElementById("add-button1");
+let addButton2 = document.getElementById("add-button2");
 
-const valueSpan1 = document.getElementById("pointsDisplay1");
-const valueSpan2 = document.getElementById("pointsDisplay2");
+let valueSpan1 = document.getElementById("pointsDisplay1");
+let valueSpan2 = document.getElementById("pointsDisplay2");
 
 
 
@@ -62,8 +62,8 @@ valueSpan2.textContent = points2;
 
 //       let questions 
 // // selectet questions grup 1 + 2
-// const Qgrup1 = document.getElementById("Grup1");
-// const Qgrup2 = document.getElementById("Grup2");
+// let Qgrup1 = document.getElementById("Grup1");
+// let Qgrup2 = document.getElementById("Grup2");
 
 // // function for choos questions grup 1 
 // Qgrup1.addEventListener("click", () => {
@@ -79,12 +79,12 @@ valueSpan2.textContent = points2;
 
 let Qgrup = [Q1];
 	
-var x = document.getElementById("myDIV");
+let alarm_div = document.getElementById("alarm-icon");
 
 let questionIndex
 let questions
 
-const buttonGroup1 = document.getElementById("button-group1");
+let buttonGroup1 = document.getElementById("button-group1");
 
 // function button choes group of questions 
 buttonGroup1.addEventListener("click", (event) => {
@@ -99,15 +99,15 @@ buttonGroup1.addEventListener("click", (event) => {
 
 
 // select element of questions
-const buttonGroup2 = document.getElementById("button-group2");
-const questionContainer = document.getElementById("question-container");
+let buttonGroup2 = document.getElementById("button-group2");
+let questionContainer = document.getElementById("question-container");
 
 // select element of answers 
-const Answer = document.getElementById("Answer");
-const AnswerContainer = document.getElementById("div-Answer");
+let Answer = document.getElementById("Answer");
+let AnswerContainer = document.getElementById("div-Answer");
 
 // select element of numbers
-const NumberContainer = document.getElementById("question-number");
+let NumberContainer = document.getElementById("question-number");
 
 
 // function button show number of questions 
@@ -134,7 +134,8 @@ AnswerContainer.textContent = "";
 Answer.addEventListener("click", (event) => {
 if (event.target.id === "Answer") {
 AnswerContainer.textContent = questions[questionIndex].answer +"  ✔";
-x.style.display = "none";
+alarm_div.style.display = "none";
+time = 60 ;
 }
 
 });
@@ -148,9 +149,9 @@ for (let button of Buttons) {
 // listen for a click event 
 button.addEventListener('click', (e) => {
 	// et = event target
-	const et = e.target;
+	let et = e.target;
 	// slect active class
-	const active = document.querySelector(".active");
+	let active = document.querySelector(".active");
 	// check for the button that has active class and remove it
 	if (active) {
 	active.classList.remove("active");
@@ -176,13 +177,13 @@ e.target.classList.replace("btn", "btn-Checked");
 
 
 // Timer function 
-var timer = document.getElementById("timer");
-var time = 90; // 3 minutes in seconds
+let timer = document.getElementById("timer");
+let time = 60; // 3 minutes in seconds
 
 // Update the timer display every second
-var intervalId = setInterval(function() {
-  var minutes = Math.floor(time / 60);
-  var seconds = time % 60;
+let intervalId = setInterval(function() {
+  let minutes = Math.floor(time / 60);
+  let seconds = time % 60;
   timer.innerHTML = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
   time--;
   
@@ -195,12 +196,12 @@ var intervalId = setInterval(function() {
 // Reset the timer when the button is clicked
 buttonGroup2.addEventListener("click", function() {
   clearInterval(intervalId);
-  time = 90;
-  timer.innerHTML = "2:00";
+  time = 60;
+  timer.innerHTML = "1:00";
 
   intervalId = setInterval(function() {
-    var minutes = Math.floor(time / 60);
-    var seconds = time % 60;
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
     timer.innerHTML = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
     time--;
 
@@ -208,9 +209,9 @@ buttonGroup2.addEventListener("click", function() {
     if (time < 0) {
       clearInterval(intervalId);
       timer.innerHTML = "0:00";
-      var bell = new Audio("./bell.mp3");
+      let bell = new Audio("./bell.mp3");
       bell.play();
-      x.style.display = "block";
+      alarm_div.style.display = "block";
     }
   }, 1000);
 });
@@ -230,6 +231,79 @@ buttonGroup2.addEventListener("click", function() {
 
 //   /* Darkmode */
 //   function Darkmode() {
-//     var element = document.body;
+//     let element = document.body;
 //     element.classList.toggle("dark-mode");
 //     };
+
+
+
+ /* Players list */
+ 
+let nameInput = document.getElementById('nameInput');
+let addBtn = document.getElementById('addBtn');
+let delet = document.getElementById('delet');
+let nameList = document.getElementById('nameList');
+let names = [ ];
+
+
+ 
+function renderNames() {
+  nameList.innerHTML = '';
+  names.forEach((name, index) => {
+    let li = document.createElement('li');
+    li.style.fontSize='25px';
+    li.innerText = name.name ;
+    
+
+  
+    let addBtn = document.createElement('button');
+    addBtn.innerText = '+';
+    addBtn.style.padding =' 5px 8px';
+    addBtn.addEventListener('click', () => {
+      names[index].points++;
+      renderNames();
+    });
+  
+
+    let subtractBtn = document.createElement('button');
+    subtractBtn.style.background = 'red';
+    subtractBtn.style.padding =' 5px 10px';
+    subtractBtn.innerText = '-';
+    subtractBtn.addEventListener('click', () => {
+      if (names[index].points > 0) {
+        names[index].points--;
+        renderNames();
+      }
+    });
+
+    
+    let points = document.createElement('span');
+    points.style.color='#9c2804';
+    points.style.fontSize='40px';
+    points.innerText = `   = ${name.points}`;
+    // points.innerText = name.points;
+    li.appendChild(points);
+    li.appendChild(addBtn);
+    li.appendChild(subtractBtn);
+    nameList.appendChild(li);
+  });
+}
+
+addBtn.addEventListener('click', () => {
+  if (nameInput.value) {
+    names.push({name: nameInput.value, points: 0});
+    renderNames();
+    nameInput.value = '';
+  }
+
+});
+
+
+delet.addEventListener('click', () => {
+  if (nameInput.value) {
+    names.shift({name: nameInput.value, points: 0});
+    renderNames();
+    nameInput.value = '';
+  }
+
+});

@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="utf-8" />
-  <title>Questions and Answer Game</title>
+  <title>Questions Game</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="Style.css">
 
@@ -17,16 +17,16 @@
   <script>
   /* Darkmode */
     function Darkmode() {
-    var element = document.body;
+    let element = document.body;
     element.classList.toggle("dark-mode");
     };
 
     function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
+  let alarm_div = document.getElementById("alarm-icon");
+  if (alarm_div.style.display === "none") {
     
   } else {
-    x.style.display = "none";
+    alarm_div.style.display = "none";
   }
 }
     </script>
@@ -37,36 +37,30 @@
 
 <body>
 
-  <div class="heder" >
-  
-    <label id="darkmodebtn" class="switch btn-color-mode-switch">
-      <input type="checkbox" name="color_mode" id="color_mode" value="1" onclick="Darkmode()">
-      <label for="color_mode" data-on="Dark" data-off="Light" class="btn-color-mode-switch-inner"></label>
-    </label>
-    <div class="container">
-      <div class="row">
-      
-        <h2 class="HederText">مسابقة الأسئلة الثقافية</h2>
-
-          <div class="div-alarm" id="myDIV" style="display: none;"> 
-            <lord-icon 
-              src="https://cdn.lordicon.com/byyilifd.json"
-              trigger="loop"
-              style="width:100px;height:100px">
-            </lord-icon>
-          </div>
-          <div 
-          class="timer" id="timer" >2:00
-          </div> 
-      </div>
+  <div class="grid-container">
+    <div class="darkmode-div" >
+      <label id="darkmodebtn" class="switch btn-color-mode-switch">
+        <input type="checkbox" name="color_mode" id="color_mode" value="1" onclick="Darkmode()">
+        <label for="color_mode" data-on="Dark" data-off="Light" class="btn-color-mode-switch-inner"></label>
+      </label>
     </div>
-    
-  </div>
 
+    <div>
+      <h2 class="HederText">مسابقة الأسئلة الثقافية</h2>
+    </div>
 
-  <div class="container">
-    <div class="row">
+    <div>
+      <div class="div-alarm" id="alarm-icon" style="display: none;"> 
+        <lord-icon 
+          src="https://cdn.lordicon.com/byyilifd.json"
+          trigger="loop"
+          style="width:100px;height:100px">
+        </lord-icon>
+      </div>
+      
+    </div>
 
+    <div>
       <div class="col">
         <h2 class="pointsDisplay3">النقاط</span></h2>
 
@@ -87,96 +81,111 @@
 
       </div>
 
-      <div class="z">
-        <div class="col1" id="button-group1">
-          <button id="button-1" class="btn" >1</button>
-          <button id="button-2" class="btn " >2</button>
-          <button id="button-3" class="btn " >3</button>
-          <button id="button-4" class="btn " >4</button>
-          <button id="button-5" class="btn " >5</button>
-          <button id="button-6" class="btn " >6</button>
-          <button id="button-7" class="btn " >7</button>
-          <button id="button-8" class="btn " >8</button>
-          <button id="button-9" class="btn " >9</button>
-          <button id="button-10" class="btn " >10</button>
-          <button id="button-11" class="btn " >11</button>
-          <button id="button-12" class="btn " >12</button>
-          <button id="button-13" class="btn " >13</button>
-          <button id="button-14" class="btn " >14</button>
-          <button id="button-15" class="btn " >15</button>
-          <button id="button-16" class="btn " >16</button>
-          <button id="button-17" class="btn " >17</button>
-          <button id="button-18" class="btn " >18</button>
-          <button id="button-19" class="btn " >19</button>
-          <button id="button-20" class="btn " >20</button>
-          <button id="button-21" class="btn " >21</button>
-          <button id="button-22" class="btn " >22</button>
-          <button id="button-23" class="btn " >23</button>
-          <button id="button-24" class="btn " >24</button>
-          <button id="button-25" class="btn " >25</button>
-          <button id="button-26" class="btn " >26</button>
-          <button id="button-27" class="btn " >27</button>
-          <button id="button-28" class="btn " >28</button>
-          <button id="button-29" class="btn " >29</button>
-          <button id="button-30" class="btn " >30</button>
-   
-      </div >
 
-        <div class="col2" id="button-group2"  >
-          <button id="button-1" class="btn btn-dark" >1</button>
-          <button id="button-2" class="btn btn-dark" >2</button>
-          <button id="button-3" class="btn btn-dark" >3</button>
-          <button id="button-4" class="btn btn-dark" >4</button>
-          <button id="button-5" class="btn btn-dark" >5</button>
-          <button id="button-6" class="btn btn-dark" >6</button>
-          <button id="button-7" class="btn btn-dark" >7</button>
-          <button id="button-8" class="btn btn-dark" >8</button>
-          <button id="button-9" class="btn btn-dark" >9</button>
-          <button id="button-10" class="btn btn-dark" >10</button>
-          <button id="button-11" class="btn btn-dark" >11</button>
-          <button id="button-12" class="btn btn-dark" >12</button>
-          <button id="button-13" class="btn btn-dark" >13</button>
-          <button id="button-14" class="btn btn-dark" >14</button>
-          <button id="button-15" class="btn btn-dark" >15</button>
-          <button id="button-16" class="btn btn-dark" >16</button>
-          <button id="button-17" class="btn btn-dark" >17</button>
-          <button id="button-18" class="btn btn-dark" >18</button>
-          <button id="button-19" class="btn btn-dark" >19</button>
-          <button id="button-20" class="btn btn-dark" >20</button>
-          <button id="button-21" class="btn btn-dark" >21</button>
-          <button id="button-22" class="btn btn-dark" >22</button>
-          <button id="button-23" class="btn btn-dark" >23</button>
-          <button id="button-24" class="btn btn-dark" >24</button>
-          <button id="button-25" class="btn btn-dark" >25</button>
-          <button id="button-26" class="btn btn-dark" >26</button>
-          <button id="button-27" class="btn btn-dark" >27</button>
-          <button id="button-28" class="btn btn-dark" >28</button>
-          <button id="button-29" class="btn btn-dark" >29</button>
-          <button id="button-30" class="btn btn-dark" >30</button>           
+    </div >
+
+    <div class="z">
+      <div class="col1" id="button-group1">
+        <button id="button-1" class="btn" >1</button>
+        <button id="button-2" class="btn " >2</button>
+        <button id="button-3" class="btn " >3</button>
+        <button id="button-4" class="btn " >4</button>
+        <button id="button-5" class="btn " >5</button>
+        <button id="button-6" class="btn " >6</button>
+        <button id="button-7" class="btn " >7</button>
+        <button id="button-8" class="btn " >8</button>
+        <button id="button-9" class="btn " >9</button>
+        <button id="button-10" class="btn " >10</button>
+        <button id="button-11" class="btn " >11</button>
+        <button id="button-12" class="btn " >12</button>
+        <button id="button-13" class="btn " >13</button>
+        <button id="button-14" class="btn " >14</button>
+        <button id="button-15" class="btn " >15</button>
+        <button id="button-16" class="btn " >16</button>
+        <button id="button-17" class="btn " >17</button>
+        <button id="button-18" class="btn " >18</button>
+        <button id="button-19" class="btn " >19</button>
+        <button id="button-20" class="btn " >20</button>
+        <button id="button-21" class="btn " >21</button>
+        <button id="button-22" class="btn " >22</button>
+        <button id="button-23" class="btn " >23</button>
+        <button id="button-24" class="btn " >24</button>
+        <button id="button-25" class="btn " >25</button>
+        <button id="button-26" class="btn " >26</button>
+        <button id="button-27" class="btn " >27</button>
+        <button id="button-28" class="btn " >28</button>
+        <button id="button-29" class="btn " >29</button>
+        <button id="button-30" class="btn " >30</button>
+      </div >
+      
+
+      <div class="col2" id="button-group2"  >
+        <button id="button-1" class="btn btn-dark" >1</button>
+        <button id="button-2" class="btn btn-dark" >2</button>
+        <button id="button-3" class="btn btn-dark" >3</button>
+        <button id="button-4" class="btn btn-dark" >4</button>
+        <button id="button-5" class="btn btn-dark" >5</button>
+        <button id="button-6" class="btn btn-dark" >6</button>
+        <button id="button-7" class="btn btn-dark" >7</button>
+        <button id="button-8" class="btn btn-dark" >8</button>
+        <button id="button-9" class="btn btn-dark" >9</button>
+        <button id="button-10" class="btn btn-dark" >10</button>
+        <button id="button-11" class="btn btn-dark" >11</button>
+        <button id="button-12" class="btn btn-dark" >12</button>
+        <button id="button-13" class="btn btn-dark" >13</button>
+        <button id="button-14" class="btn btn-dark" >14</button>
+        <button id="button-15" class="btn btn-dark" >15</button>
+        <button id="button-16" class="btn btn-dark" >16</button>
+        <button id="button-17" class="btn btn-dark" >17</button>
+        <button id="button-18" class="btn btn-dark" >18</button>
+        <button id="button-19" class="btn btn-dark" >19</button>
+        <button id="button-20" class="btn btn-dark" >20</button>
+        <button id="button-21" class="btn btn-dark" >21</button>
+        <button id="button-22" class="btn btn-dark" >22</button>
+        <button id="button-23" class="btn btn-dark" >23</button>
+        <button id="button-24" class="btn btn-dark" >24</button>
+        <button id="button-25" class="btn btn-dark" >25</button>
+        <button id="button-26" class="btn btn-dark" >26</button>
+        <button id="button-27" class="btn btn-dark" >27</button>
+        <button id="button-28" class="btn btn-dark" >28</button>
+        <button id="button-29" class="btn btn-dark" >29</button>
+        <button id="button-30" class="btn btn-dark" >30</button>           
+      </div>
+
+      <div >
+        <div class="question-button">
+          <h3 class="question-BG"> الأسئلة:  </h3>
+          <h3 class="question-BG2"> <span id="question-number"></span> :السؤال </h3>
+          <h2 class="question-text" id="question-container" > </h2>
         </div>
+        
+       
+
+        <div class="Answer-button">
+          <button id="Answer" class="btn btn-success" >الاجابة</button>
+          <h1 id="div-Answer" class="Answer"></h1>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div>
+      <div 
+      class="timer" id="timer" >1:00
+      </div> 
+      <div class="containerx">
+        <h1>الالعبين</h1>
+        <input type="text" id="nameInput" placeholder="اسم اللاعب">
+        <button id="addBtn">اضافة</button>
+        <button id="delet">حذف</button>
+        <ul id="nameList"></ul>
+      </div>
     
 
-     
-        <div class="co4">
-          <div class="question-button">
-            <h3 class="question-BG"> الأسئلة:  </h3>
-            <h3 class="question-BG2"> <span id="question-number"></span> :السؤال </h3>
-            <h2 class="question-text" id="question-container" > </h2>
-          </div>
-          
-         
-
-          <div class="Answer-button">
-            <button id="Answer" class="btn btn-success" >Answer</button>
-            <h3 id="div-Answer" class="Answer"></h3>
-          </div>
-        </div>
-
-      </div>
     </div>
-  </div>
 
- 
+  </div>
   
 
   <script type="module" src="App.js"></script>

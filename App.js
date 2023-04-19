@@ -1,4 +1,5 @@
-import {Q1} from './component.js'; 
+import {Q1} from './component.js';
+
 
 
 let points1 = 0; // initialize points1 letiable to 0
@@ -8,11 +9,15 @@ let points2 = 0; // initialize points2 letiable to 0
 document.getElementById("countBtn1").addEventListener("click", function() {
 points1++; // increment points1 by 1
 document.getElementById("pointsDisplay1").innerHTML = points1; // display the updated points1 value
+let bell = new Audio("./Points.mp3");
+bell.play();
 });
 
 document.getElementById("countBtn2").addEventListener("click", function() {
 points2++; // increment points2 by 1
 document.getElementById("pointsDisplay2").innerHTML = points2; // display the updated points2 value
+let bell = new Audio("./Points.mp3");
+bell.play();
 });
 
 document.getElementById("countBtn3").addEventListener("click", function() {
@@ -38,23 +43,31 @@ let valueSpan2 = document.getElementById("pointsDisplay2");
 subtractButton.addEventListener("click", () => {
 points1 -= 1;
 valueSpan1.textContent = points1;
+let bell = new Audio("./minus.wav");
+bell.play();
 });
 
 // addButton
 addButton.addEventListener("click", () => {
 points1 += 1;
 valueSpan1.textContent = points1;
+let bell = new Audio("./Points.mp3");
+bell.play();
 });
 
 
 subtractButton2.addEventListener("click", () => {
 points2 -= 1;
 valueSpan2.textContent = points2;
+let bell = new Audio("./minus.wav");
+bell.play();
 });
 
 addButton2.addEventListener("click", () => {
 points2 += 1;
 valueSpan2.textContent = points2;
+let bell = new Audio("./Points.mp3");
+bell.play();
 });
 
 
@@ -76,9 +89,30 @@ valueSpan2.textContent = points2;
 // });
 
 
+let passwordInput = document.getElementById("password");
+let Chackit = document.getElementById("Chack");
 
+
+let Qgrup0 = [];
 let Qgrup = [Q1];
-	
+
+
+let Data = Qgrup0
+
+
+Chackit.addEventListener("click", () => {
+    
+  if (passwordInput.value === '1') {
+    Data = Qgrup
+  console.log(Data);
+
+  }
+  });
+
+
+
+
+
 let alarm_div = document.getElementById("alarm-icon");
 
 let questionIndex
@@ -91,9 +125,9 @@ buttonGroup1.addEventListener("click", (event) => {
 
   if (event.target.nodeName === "BUTTON") {
     questionIndex = event.target.id.split("-")[1] - 1;
-    questions = Qgrup[0][questionIndex];
- 
-  }
+    questions = Data[0][questionIndex];
+  } 
+
   });
 
 
@@ -299,11 +333,18 @@ addBtn.addEventListener('click', () => {
 });
 
 
+
 delet.addEventListener('click', () => {
-  if (nameInput.value) {
-    names.shift({name: nameInput.value, points: 0});
+
+  let inputText = document.getElementById("nameInput").value;
+  let index = names.findIndex(item => item.name === inputText);
+  if (index !== -1) {
+    names.splice(index, 1);
+    while (nameList.firstChild) {
+      nameList.removeChild(nameList.firstChild);
+    }
     renderNames();
-    nameInput.value = '';
   }
 
 });
+

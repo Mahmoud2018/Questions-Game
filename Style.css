@@ -3,13 +3,17 @@ body{
   font-size: 22px;
   font-family: 'Cairo', sans-serif;
   font-family: 'Rakkas', cursive;
+  background-image: url('https://wallpapercave.com/wp/wp9274695.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
  }
 
 .Answer-button {
   text-align: center;
 
   margin-bottom: 10px;
-  color:green;
+  /* color:green; */
 }
 
 
@@ -237,6 +241,10 @@ margin-left: 30%;
 .dark-mode {
   background-color: #212529;
   color: white;
+  background-image: url('https://wallpapercave.com/uwp/uwp3520872.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
 }
 
 div.btn-container{
@@ -408,9 +416,18 @@ p.by a{
   margin-top: -100px;
 }
 
+
+#alarm{
+  width: 100px;
+  margin-top: 10%;
+  color: #fede00;
+  margin-left: 20%;
+}
+
+
 .div-alarm{
   margin-left: 50%;
-  margin-top: -7%;
+  margin-top: 0%;
 }
 
 
@@ -436,21 +453,6 @@ p.by a{
 
  /* Players list */
 
- .containerx .btn {
-
- 
-}
-
-
-
-#nameInput {
-  /* width: 150px;
-  padding: 7px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px; */
-}
 
 #delet {
   background-color: #9c2804;
@@ -488,3 +490,21 @@ li button {
   margin-left: 10px;
 }
 
+#Chack{
+  margin-left: 50px;
+
+ }
+
+
+#ChackMS{
+  font-size: 20px;
+  color: #349c04;
+  padding: 7px;
+  margin: 5px ;
+  
+ }
+
+ .Players{
+  margin-top: 10px;
+  text-align: center;
+ }

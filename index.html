@@ -9,26 +9,32 @@
 
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@900&family=Rakkas&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@900&family=Rakkas&display=swap" rel="stylesheet">
+
+   <!-- Font Awesome icons (free version)-->
+   <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
    
   <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
 
   <script>
+
   /* Darkmode */
     function Darkmode() {
     let element = document.body;
     element.classList.toggle("dark-mode");
+    
     };
 
     function myFunction() {
-  let alarm_div = document.getElementById("alarm-icon");
-  if (alarm_div.style.display === "none") {
-    
-  } else {
-    alarm_div.style.display = "none";
-  }
-}
+      let alarm_div = document.getElementById("alarm-icon");
+      if (alarm_div.style.display === "none") {
+        
+      } else {
+        alarm_div.style.display = "none";
+      }
+    }
+
     </script>
   
 </head>
@@ -43,6 +49,7 @@
         <input type="checkbox" name="color_mode" id="color_mode" value="1" onclick="Darkmode()">
         <label for="color_mode" data-on="Dark" data-off="Light" class="btn-color-mode-switch-inner"></label>
       </label>
+      
     </div>
 
     <div>
@@ -51,11 +58,9 @@
 
     <div>
       <div class="div-alarm" id="alarm-icon" style="display: none;"> 
-        <lord-icon 
-          src="https://cdn.lordicon.com/byyilifd.json"
-          trigger="loop"
-          style="width:100px;height:100px">
-        </lord-icon>
+        <span id="alarm" class="fa-stack">
+          <i class="fas fa-bell  fa-2xl fa-shake" style="--fa-beat-scale: 1.2"></i>
+      </span>
       </div>
       
     </div>
@@ -174,8 +179,16 @@
       <div 
       class="timer" id="timer" >1:00
       </div> 
-      <div class="containerx">
-        <h1>الالعبين</h1>
+   <form>
+        <h4 class="Password" >❗ادخل كلمة السر لتظهر الاسئلة </h4>
+        <input type="password" id="password" name="password" required>
+       
+        <button id="Chack" type="button" >تخقق</button>
+        <label > <h5 id="ChackMS"></h5 > </label>
+
+      </form>
+      <div class="Players">
+        <h1>🙂 الالعبين </h1>
         <input type="text" id="nameInput" placeholder="اسم اللاعب">
         <button id="addBtn">اضافة</button>
         <button id="delet">حذف</button>

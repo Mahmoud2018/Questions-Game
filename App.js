@@ -101,15 +101,17 @@ let Data = Qgrup0
 
 
 Chackit.addEventListener("click", () => {
-    
-  if (passwordInput.value === '1') {
+  let ChackMS = document.getElementById('ChackMS');
+if (passwordInput.value === '1') {
     Data = Qgrup
-  console.log(Data);
+    ChackMS.style.color = "green";
+    ChackMS.innerHTML = 'كلمة السر صحيحة' + "✅";
+} else {
+  ChackMS.style.color = "red";
+  ChackMS.innerHTML = '  حاول مرة اخرى ❌';
+}
 
-  }
-  });
-
-
+});
 
 
 

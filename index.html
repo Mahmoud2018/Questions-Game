@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <title>Questions Game</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="./css/Style.css">
 
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,25 +17,7 @@
    
   <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
 
-  <script>
 
-  /* Darkmode */
-    function Darkmode() {
-    let element = document.body;
-    element.classList.toggle("dark-mode");
-    
-    };
-
-    function myFunction() {
-      let alarm_div = document.getElementById("alarm-icon");
-      if (alarm_div.style.display === "none") {
-        
-      } else {
-        alarm_div.style.display = "none";
-      }
-    }
-
-    </script>
   
 </head>
 
@@ -170,41 +152,146 @@
           <button id="Answer" class="btn btn-success" >الاجابة</button>
           <h1 id="div-Answer" class="Answer"></h1>
         </div>
+        
       </div>
+
+      
 
 
     </div>
 
     <div>
       <div 
-      class="timer" id="timer" >1:00
-      </div> 
-   <form>
+       class="timer" id="timer" >1:00
+      </div>
+      
+    <form>
         <h4 class="Password" >❗ادخل كلمة السر لتظهر الاسئلة </h4>
         <input type="password" id="password" name="password" required>
        
-        <button id="Chack" type="button" >تخقق</button>
+        <button class="btn btn-success" id="Chack" type="button" >تخقق</button>
         <label > <h5 id="ChackMS"></h5 > </label>
 
-      </form>
+    </form>
       <div class="Players">
         <h1>🙂 الالعبين </h1>
-        <input type="text" id="nameInput" placeholder="اسم اللاعب">
-        <button id="addBtn">اضافة</button>
-        <button id="delet">حذف</button>
-        <ul id="nameList"></ul>
-      </div>
-    
+        <ul id="player-list"></ul>
+        <form>
+          <label placeholder="اسم اللاعب" for="new-player"></label>
+          <input type="text" id="new-player" />
+          <button class="btn btn-success" type="button" onclick="addPlayer()">اضافة</button>
+          <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#basicModal" onclick="Allwinnar()" >النتيجة</button> 
 
-    </div>
+            <!-- basic modal -->
+            <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 > المراكز الاولى الثلاثة</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="card one">
+
+                      <div class="sort">
+                    
+                      </div>
+                        <div class="profile">
+                          <div class="person second">
+                            <div class="num">2</div>
+                            <i class="fas fa-caret-up"></i>
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="" class="photo">
+                            <p id="winnar2" class="link"></p>
+                            <p id="score2" class="points"></p>
+                          </div>
+                          
+                          <div class="person first">
+                            <div class="num">1</div>
+                            <i class="fas fa-crown"></i>
+                            <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="" class="photo main">
+                            <p id="winnar1" class="link"></p>
+                            <p id="score1" class="points"></p>
+                          </div>
+                          
+                          <div class="person third">
+                            <div class="num">3</div>
+                            <i class="fas fa-caret-up"></i>
+                            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922561.png" alt="" class="photo">
+                            <p id="winnar3" class="link"></p>
+                            <p id="score3" class="points"></p>
+                          </div>
+                      
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">اغلاق</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+        </form>
+       
+
+
+        <div class="container">
+         
+         
+        <!-- basic modal -->
+        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h3>Modal Body</h3>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+  
 
   </div>
   
 
-  <script type="module" src="App.js"></script>
+  <script type="module" src="./Js/App.js"></script>
+  <script src="./Js/funciones.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+<!-- <div class="Players">
+  <h1>🙂 الالعبين </h1>
+  <input type="text" id="nameInput" placeholder="اسم اللاعب">
+  <button id="addBtn">اضافة</button>
+  <button id="delet">حذف</button>
+  <ul id="nameList"></ul>
+</div> -->

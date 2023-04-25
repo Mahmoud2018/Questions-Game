@@ -510,9 +510,11 @@ li button {
 
 #modal-header{
   text-align: center;
+
  }
 
  /* Winner */
+
 
  .card{
 
@@ -525,6 +527,7 @@ li button {
   margin-top: -20px;
   overflow-x: hidden;
   overflow-y: hidden;
+  color: #9c2804;
 }
 
 .one .sort{
@@ -554,7 +557,8 @@ li button {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
-  margin-bottom: -2rem
+  margin-bottom: -2rem;
+  gap: 50px;
 }
 
 .profile .person{

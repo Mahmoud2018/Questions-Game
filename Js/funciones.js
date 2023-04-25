@@ -100,14 +100,15 @@ function Allwinnar() {
   showSecondWinnerName();
   showThirdWinnerName();
   // console.log(All)
+  
   winnar1.innerHTML = All[0];
-  score1.innerHTML ='Score <br>' + All[1];
+  score1.innerHTML ='Score <br>' + All[1]+ ' xp';
 
   winnar2.innerHTML =  All[2];
-  score2.innerHTML = 'Score <br>'+ All[3];
+  score2.innerHTML = 'Score <br>'+ All[3] + ' xp';
 
   winnar3.innerHTML = All[4] ;
-  score3.innerHTML = 'Score <br>' + All[5]; 
+  score3.innerHTML = 'Score <br>' + All[5] + ' xp'; 
 
 // ("first winner is: " + firstWinnerName + " with a score of " + highestScore + "!")
 

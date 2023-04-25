@@ -22,13 +22,13 @@ function addPlayer() {
 }
 
 function addScore(index) {
-  playerList[index].score++;
+  playerList[index].score+= 150 ;
   renderPlayerList();
 }
 
 function subtractScore(index) {
   if (playerList[index].score > 0) {
-    playerList[index].score--;
+    playerList[index].score-= 150;
     renderPlayerList();
   }
 }
@@ -96,16 +96,18 @@ function renderPlayerList() {
 }
 
 function Allwinnar() {
-  showFirstWinnerName()
-  showSecondWinnerName()
-  showThirdWinnerName()
+  showFirstWinnerName();
+  showSecondWinnerName();
+  showThirdWinnerName();
   // console.log(All)
-  winnar1.innerHTML = All[0]
-  winnar2.innerHTML = All[2] 
-  winnar3.innerHTML = All[4]
-  score1.innerHTML = All[1]
-  score2.innerHTML = All[3] 
-  score3.innerHTML = All[5] 
+  winnar1.innerHTML = All[0];
+  score1.innerHTML ='Score <br>' + All[1];
+
+  winnar2.innerHTML =  All[2];
+  score2.innerHTML = 'Score <br>'+ All[3];
+
+  winnar3.innerHTML = All[4] ;
+  score3.innerHTML = 'Score <br>' + All[5]; 
 
 // ("first winner is: " + firstWinnerName + " with a score of " + highestScore + "!")
 

@@ -517,10 +517,15 @@ li button {
  .card{
 
   border-radius: 15px;
-  background: #02383C;
+  background: #495057;
 }
 
-
+.modal-open .modal {
+  margin-left: -9%;
+  margin-top: -20px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 
 .one .sort{
   display: flex;
@@ -533,10 +538,10 @@ li button {
 
 .photo{
   width: 100px;
-  background: #fff;
+  background: #212529;
   border-radius: 50%;
-  border: 5px solid cyan;
-  box-shadow: 0 0 20px cyan;
+  border: 5px solid rgb(255, 204, 0);
+  box-shadow: 0 0 20px rgb(208, 255, 0);
   margin: 1rem 0;
 }
 
@@ -548,7 +553,8 @@ li button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: -2rem
 }
 
 .profile .person{
@@ -557,6 +563,7 @@ li button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 }
 
 .profile .person.first{
@@ -570,24 +577,26 @@ li button {
 }
 
 .num{
-  color: white;
+  font-size: 35px;
+  width: 60px;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+  background: #212529;
+  border-radius: 47%;
+  border: 5px solid rgb(255 255 255);
+  box-shadow: 0 0 20px #fff;
 }
 
-.fa-caret-up{
-  color: cyan;
+.fa-caret-down{
+  color: rgb(30, 255, 0);
   font-size: 21px;
 }
 
-.link{
-  margin: 0.2rem 0;
-  color: #fff;
-  margin-top: -0.3rem;
-  font-size: 13px;
-}
+
 
 .points{
-  color: cyan;
-  font-size: 17px;
+  color: rgb(255, 255, 255);
+  font-size: 35px;
 }
 
 .second{
@@ -602,14 +611,43 @@ li button {
 
 .modal-header{
   display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: start;
-    align-items: stretch;
-    -ms-flex-pack: justify;
-    justify-content: flex-start;
-    padding: 1rem 1rem;
-    border-bottom: 1px solid #dee2e6;
-    border-top-left-radius: .3rem;
-    border-top-right-radius: .3rem;
-    flex-direction: column-reverse;
+  /* display: flex; */
+  -ms-flex-align: start;
+  align-items: stretch;
+  -ms-flex-pack: justify;
+  justify-content: flex-start;
+  /* padding: 0rem 0rem; */
+  /* border-bottom: 1px solid #dee2e6; */
+  /* border-top-left-radius: .3rem; */
+  /* border-top-right-radius: .3rem; */
+  flex-direction: column-reverse;
+}
+
+.modal-content {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 800px;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  outline: 0;
+}
+
+
+.modal-body {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+
+}
+
+
+#Close{
+  margin-top: 10px;
 }

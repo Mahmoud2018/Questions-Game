@@ -191,9 +191,9 @@ function generateRandomPicture(array){
 	image1.setAttribute("src", array[randomNum + 1]);
 	image2.setAttribute("src", array[randomNum + 2] );
 	image3.setAttribute("src", array[randomNum ] );
-  console.log(image1)
-  console.log(image2)
-  console.log(image3)
+  // console.log(image1)
+  // console.log(image2)
+  // console.log(image3)
 
 }
 

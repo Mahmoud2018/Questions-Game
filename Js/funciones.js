@@ -111,7 +111,8 @@ function Allwinnar() {
   score3.innerHTML = 'Score <br>' + All[5] + ' xp'; 
 
 // ("first winner is: " + firstWinnerName + " with a score of " + highestScore + "!")
-
+  let WIN = new Audio("./Sounds/success.mp3");
+    WIN.play();
   };
 
 
@@ -123,7 +124,7 @@ function Allwinnar() {
   };
 
 
-
+/* Show Alarm */
  function myFunction() {
     let alarm_div = document.getElementById("alarm-icon");
     if (alarm_div.style.display === "none") {
@@ -132,3 +133,67 @@ function Allwinnar() {
     alarm_div.style.display = "none";
     }
 }
+
+/* Random characters Winner */
+const imageArray = [
+  "./pic/1.png",
+  "./pic/2.png",
+  "./pic/3.png",
+  "./pic/4.png",
+  "./pic/5.png",
+  "./pic/6.png",
+  "./pic/7.png",
+  "./pic/8.png",
+  "./pic/9.png",
+  "./pic/10.png",
+  "./pic/11.png",
+  "./pic/12.png",
+  "./pic/13.png",
+  "./pic/14.png",
+  "./pic/15.png",
+  "./pic/16.png",
+  "./pic/17.png",
+  "./pic/18.png",
+  "./pic/19.png",
+  "./pic/20.png",
+  "./pic/21.png",
+  "./pic/22.png",
+  "./pic/23.png",
+  "./pic/24.png",
+  "./pic/25.png",
+  "./pic/26.png",
+  "./pic/27.png",
+  "./pic/28.png",
+  "./pic/29.png",
+  "./pic/30.png",
+  "./pic/31.png",
+  "./pic/32.png",
+  "./pic/33.png",
+  "./pic/34.png",
+  "./pic/35.png",
+  "./pic/36.png",
+  "./pic/37.png",
+  "./pic/38.png",
+  
+];
+
+const image1 = document.getElementById("img1");
+const image2 = document.getElementById("img2");
+const image3 = document.getElementById("img3");
+const button = document.getElementById("Chack");
+
+window.onload = () => generateRandomPicture(imageArray);
+
+button.addEventListener("click", () => generateRandomPicture(imageArray));
+
+function generateRandomPicture(array){
+	let randomNum = Math.floor(Math.random() * 35); 
+	image1.setAttribute("src", array[randomNum + 1]);
+	image2.setAttribute("src", array[randomNum + 2] );
+	image3.setAttribute("src", array[randomNum ] );
+  console.log(image1)
+  console.log(image2)
+  console.log(image3)
+
+}
+

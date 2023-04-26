@@ -93,6 +93,8 @@ function renderPlayerList() {
                      " <button style='background-color: #9c2804' onclick='removePlayer(" + i + ")'>x</button>" 
     list.appendChild(item);
   }
+  let bell = new Audio("./Sounds/add.mp3");
+      bell.play();
 }
 
 function Allwinnar() {

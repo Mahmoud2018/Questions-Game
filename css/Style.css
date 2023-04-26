@@ -28,11 +28,8 @@ body{
 }
 
 
-.button-group1 {
-margin-left: 30%;
-}
 
-.col1 {
+.button-group1 {
   margin-top: 2%;
   display: grid;
   column-gap: 35px;
@@ -43,10 +40,9 @@ margin-left: 30%;
   justify-content: center;
   align-content: center;
   align-items: center;
-
 }
 
-.col2 {
+.button-group2 {
   margin-top: 3%;
   display: grid;
   column-gap: 10px;
@@ -67,7 +63,7 @@ margin-left: 30%;
   font-family: 'Rakkas', cursive;
 }
 
-.z .col1 .btn{
+.question-groups .button-group1 .btn{
   background-color: #6c6adf;
   color: white;
 }
@@ -653,5 +649,5 @@ li button {
 
 
 #Close{
-  margin-top: 10px;
+  margin-top: 4px;
 }

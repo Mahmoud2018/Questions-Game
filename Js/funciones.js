@@ -191,7 +191,7 @@ button.addEventListener("click", () => generateRandomPicture(imageArray));
 function generateRandomPicture(array){
 	let randomNum = Math.floor(Math.random() * 35); 
 	image1.setAttribute("src", array[randomNum + 1]);
-	image2.setAttribute("src", array[randomNum + 2] );
+	image2.setAttribute("src", array[randomNum + 2]);
 	image3.setAttribute("src", array[randomNum ] );
   // console.log(image1)
   // console.log(image2)

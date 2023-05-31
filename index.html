@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="utf-8" />
-  <title>s Game</title>
+  <title>Question Game</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/Style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,7 +65,8 @@
 
     </div >
 
-    <div class="question-groups">
+    <div class="question-groups" style="text-align: center;">
+      <h3 style="color: #6c6adf;" >اختر مجموعة الاسئلة أولا 👇</h3>
       <div class="button-group1" id="button-group1">
         <button id="button-1" class="btn"  >1</button>
         <button id="button-2" class="btn " >2</button>
@@ -97,10 +98,12 @@
         <button id="button-28" class="btn " >28</button>
         <button id="button-29" class="btn " >29</button>
         <button id="button-30" class="btn " >30</button>
+        
       </div >
       
+      <h3 style="color: #27272c; margin-top:30px" > الاسئلة</h3>
 
-      <div class="button-group2" id="button-group2"  >
+      <div class="button-group2" id="button-group2" style="margin-top: -5px;" >
         <button id="button-1" class="btn btn-dark" >1</button>
         <button id="button-2" class="btn btn-dark" >2</button>
         <button id="button-3" class="btn btn-dark" >3</button>
@@ -162,13 +165,15 @@
 
 
       <div class="Players">
-        <h1>🙂 الالعبين </h1>
+        <h1>🙂 اللاعبين </h1>
         <ul id="player-list"></ul>
         <form>
           <label placeholder="اسم اللاعب" for="new-player"></label>
           <input type="text" id="new-player" />
+
           <button class="btn btn-success" type="button" onclick="addPlayer()">اضافة</button>
           <button class="btn btn-info" type="button" data-toggle="modal" data-target="#basicModal" onclick="Allwinnar()" >النتيجة</button> 
+          <label > <h5 id="ChackMS2"></h5 > </label>
 
             <!-- basic modal -->
             <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">

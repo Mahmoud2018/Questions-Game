@@ -10,15 +10,25 @@ var score2 = document.getElementById("score2");
 var score3 = document.getElementById("score3");
 
 function addPlayer() {
+  let ChackMS2 = document.getElementById('ChackMS2');
   var input = document.getElementById("new-player");
   var name = input.value;
   var player = {
     name: name,
     score: 0
   };
-  playerList.push(player);
-  renderPlayerList();
-  input.value = "";
+
+  if (name == null || name == "") {
+    ChackMS2.style.color = "red";
+    ChackMS2.innerHTML = '  اكتب اسم الالعب ❌';
+    let bell = new Audio("./Sounds/wrong.mp3");
+        bell.play();
+    } else {
+      playerList.push(player);
+      renderPlayerList();
+      input.value = "";
+    }
+
 }
 
 function addScore(index) {
